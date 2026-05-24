@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci y Números Primos - Matemáticas en la Vida Real</title>
+  <link rel="stylesheet" href="css/stilos2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- ===== ENCABEZADO ===== -->
+  <header>
+    <div class="header-pattern"></div>
+    <div class="badge">Desafío Web · Matemáticas Aplicadas</div>
+    <h1>Fibonacci y <span>Números Primos</span><br>en la Vida Real</h1>
+    <p class="header-sub">Matemáticas que resuelven problemas del mundo real mediante algoritmos interactivos</p>
+    <div class="student-info">
+      <span>Estudiante:</span> Lizbeth Cochi Mamani &nbsp;·&nbsp;
+    </div>
+  </header>
+ 
+  <!-- ===== NAVEGACIÓN ===== -->
+  <nav>
+    <a href="#contexto">Contexto</a>
+    <a href="#algoritmo">Algoritmo</a>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#conclusion">Conclusión</a>
+    <a href="#enlaces">Enlaces</a>
+  </nav>
+ 
+  <!-- ===== SECCIÓN 1: CONTEXTO ===== -->
+  <section id="contexto">
+    <p class="section-label">01 · Contexto del Problema</p>
+    <h2>¿Por qué aplicar estas matemáticas?</h2>
+    <p class="intro-text">
+      Los patrones matemáticos están en todas partes. La serie de Fibonacci describe el crecimiento
+      natural — desde espirales en caracoles hasta pétalos de flores. Los números primos son la base
+      de la seguridad informática moderna. Esta herramienta los combina para revelar cuáles términos
+      de Fibonacci también son primos: un conjunto rarísimo y fascinante de números.
+    </p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon fib">Fn</div>
+        <h3>Serie de Fibonacci</h3>
+        <p>Cada número es la suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13… Describe patrones
+        de crecimiento en la naturaleza, arquitectura y finanzas.</p>
+        <span class="tag fib">Crecimiento natural</span>
+      </div>
+      <div class="card">
+        <div class="card-icon prime">P</div>
+        <h3>Números Primos</h3>
+        <p>Solo divisibles entre 1 y sí mismos. Son los bloques constructores de todos los números
+        enteros y la base del cifrado RSA moderno.</p>
+        <span class="tag prime">Criptografía · Seguridad</span>
+      </div>
+      <div class="card">
+        <div class="card-icon combo">∩</div>
+        <h3>Primos de Fibonacci</h3>
+        <p>Los términos Fibonacci que también son primos son escasos y especiales. Detectarlos es
+        un problema activo en la matemática computacional.</p>
+        <span class="tag combo">Combinación única</span>
+      </div>
+    </div>
+  </section>
+ 
+  <hr class="divider">
+ 
+  <!-- ===== SECCIÓN 2: ALGORITMO ===== -->
+  <section id="algoritmo">
+    <p class="section-label">02 · Explicación del Algoritmo</p>
+    <h2>¿Cómo funciona el código?</h2>
+ 
+    <!-- Algoritmo Fibonacci -->
+    <div class="algo-box">
+      <div class="algo-header">
+        <div class="algo-dot fib-dot"></div>
+        <strong>Algoritmo A: Generación de Fibonacci</strong>
+      </div>
+      <div class="algo-content">
+        <div class="algo-steps">
+          <div class="algo-step">
+            <div class="step-n">1</div>
+            <div>Se inician dos variables <code>a = 0</code> y <code>b = 1</code> (primeros dos términos)</div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">2</div>
+            <div>En cada iteración del ciclo, se calcula <code>c = a + b</code> (siguiente término)</div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">3</div>
+            <div>Se actualiza: <code>a = b</code> y luego <code>b = c</code> para avanzar la secuencia</div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">4</div>
+            <div>Se repite hasta generar la cantidad de términos solicitada por el usuario</div>
+          </div>
+        </div>
+        <div class="code-block">
+<span class="kw">let</span> a = <span class="num">1</span>, b = <span class="num">1</span>, c;
+<span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">2</span>; i &lt; n; i++) {
+  c = a + b;
+  a = b;
+  b = c; <span class="cm">// sin arrays, solo variables simples</span>
+}
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Algoritmo Primo -->
+    <div class="algo-box">
+      <div class="algo-header">
+        <div class="algo-dot prime-dot"></div>
+        <strong>Algoritmo B: Verificación de Número Primo</strong>
+      </div>
+      <div class="algo-content">
+        <div class="algo-steps">
+          <div class="algo-step">
+            <div class="step-n">1</div>
+            <div>Se recibe un número entero y se cuenta cuántos divisores tiene</div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">2</div>
+            <div>Se itera desde 1 hasta el número verificando <code>numero % i == 0</code></div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">3</div>
+            <div>Si el contador de divisores es exactamente 2 (solo 1 y sí mismo) → es primo</div>
+          </div>
+          <div class="algo-step">
+            <div class="step-n">4</div>
+            <div>Números menores a 2 nunca son primos por definición matemática</div>
+          </div>
+        </div>
+        <div class="code-block">
+<span class="kw">let</span> numero = <span class="fn">parseInt</span>(document.<span class="fn">getElementById</span>(<span class="str">"numero"</span>).value);
+<span class="kw">let</span> contador = <span class="num">0</span>;
+<span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">1</span>; i &lt;= numero; i++) {
+  <span class="kw">if</span> (numero % i == <span class="num">0</span>) contador++;
+}
+<span class="kw">if</span> (contador == <span class="num">2</span>) {
+  document.<span class="fn">getElementById</span>(<span class="str">"resultado"</span>).innerHTML = <span class="str">"El número es primo"</span>;
+} <span class="kw">else</span> {
+  document.<span class="fn">getElementById</span>(<span class="str">"resultado"</span>).innerHTML = <span class="str">"El número no es primo"</span>;
+}
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <hr class="divider">
+ 
+  <!-- ===== SECCIÓN 3: FORMULARIO + RESULTADO ===== -->
+  <section id="calculadora">
+    <p class="section-label">03 · Calculadora Interactiva</p>
+    <h2>Ingresa los datos y calcula</h2>
+ 
+    <div class="form-container">
+      <form onsubmit="return false;">
+        <div class="form-row">
+ 
+          <!-- Selector de modo -->
+          <div class="form-group">
+            <label for="modo">Modo de cálculo</label>
+            <select id="modo" onchange="cambiarModo()">
+              <option value="combinado">Fibonacci + Primos (combinado)</option>
+              <option value="fibonacci">Solo secuencia Fibonacci</option>
+              <option value="primo">Verificar número primo</option>
+              <option value="ahorro">Ahorro progresivo Fibonacci</option>
+            </select>
+          </div>
+ 
+          <!-- Cantidad de términos -->
+          <div class="form-group" id="grupo-terminos">
+            <label for="terminos">Cantidad de términos</label>
+            <input type="number" id="terminos" min="2" max="40" value="15" placeholder="Ej: 15">
+          </div>
+ 
+          <!-- Número a verificar (solo modo primo) -->
+          <div class="form-group" id="grupo-numero" style="display:none;">
+            <label for="numero">Número a verificar</label>
+            <input type="number" id="numero" min="1" value="97" placeholder="Ej: 97">
+          </div>
+ 
+          <!-- Monto base (solo modo ahorro) -->
+          <div class="form-group" id="grupo-monto" style="display:none;">
+            <label for="monto">Depósito base (Bs.)</label>
+            <input type="number" id="monto" min="1" value="1" placeholder="Ej: 1">
+          </div>
+ 
+        </div>
+ 
+        <!-- Botón de ejecución -->
+        <button class="btn-calc" onclick="calcular()">▶ CALCULAR</button>
+        <button class="btn-clear" onclick="limpiar()">Limpiar resultado</button>
+      </form>
+    </div>
+ 
+    <!-- Área de resultados -->
+    <div id="resultado-container">
+      <div class="result-placeholder" id="placeholder">
+        <div class="big-icon">Σ</div>
+        <p>Ingresa los datos y presiona <strong>CALCULAR</strong><br>para ver los resultados aquí</p>
+      </div>
+      <div id="resultado" style="display:none;"></div>
+    </div>
+  </section>
+ 
+  <hr class="divider">
+ 
+  <!-- ===== SECCIÓN 4: CONCLUSIÓN ===== -->
+  <section id="conclusion">
+    <p class="section-label">04 · Conclusión</p>
+    <h2>¿Cómo ayuda la matemática?</h2>
+    <div class="conclusion-box">
+      <p>La <span class="highlight-teal">serie de Fibonacci</span> no es solo una curiosidad matemática —
+      es un modelo del crecimiento real. Aparece en la disposición de semillas de girasoles, el número
+      de pétalos de flores, la reproducción de colonias de abejas y hasta en análisis financiero.
+      Programar su generación nos enseña a pensar en términos de <em>patrones iterativos</em>.</p>
+ 
+      <p>Los <span class="highlight-gold">números primos</span> son la base de la criptografía moderna.
+      Cada vez que realizas una compra en línea, tu información es protegida usando el algoritmo RSA,
+      que depende de que factorizar productos de números primos grandes es computacionalmente difícil.
+      Verificar primos enseña el concepto de <em>divisibilidad y seguridad matemática</em>.</p>
+ 
+      <p>Combinar ambos conceptos revela una pregunta abierta en matemáticas:
+      <span class="highlight-gold">¿existen infinitos primos de Fibonacci?</span> Actualmente se conocen
+      muy pocos. Esta herramienta permite explorar esa frontera del conocimiento matemático de forma
+      interactiva y visual.</p>
+    </div>
+  </section>
+ 
+  <hr class="divider">
+ 
+  <!-- ===== SECCIÓN 5: ENLACES ===== -->
+  <section id="enlaces">
+    <p class="section-label">05 · Entregables</p>
+    <h2>Repositorio y página publicada</h2>
+    <div class="links-row">
+      <a class="link-card" href="https://github.com/tu-usuario/desafio-fibonacci-primos" target="_blank">
+        <div class="link-icon">⚙</div>
+        <div>
+          <p>Repositorio Git</p>
+          <span>github.com/tu-usuario/...</span>
+        </div>
+      </a>
+      <a class="link-card" href="https://tu-usuario.github.io/desafio-fibonacci-primos" target="_blank">
+        <div class="link-icon">🌐</div>
+        <div>
+          <p>Página Publicada</p>
+          <span>GitHub Pages / Vercel</span>
+        </div>
+      </a>
+    </div>
+    <p class="links-note">⚠ Reemplaza los enlaces con los URLs reales de tu repositorio y despliegue antes de entregar.</p>
+  </section>
+ 
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    Proyecto desarrollado con <span>HTML · CSS · JavaScript</span> · Desafío Fibonacci y Primos · 2025
+  </footer>
+ 
+  <script src="js/scrip2.js"></script>
+</body>
+</html>
+ 
