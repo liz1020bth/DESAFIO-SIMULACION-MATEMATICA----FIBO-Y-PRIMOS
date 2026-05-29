@@ -1,265 +1,1072 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fibonacci y Números Primos - Matemáticas en la Vida Real</title>
-  <link rel="stylesheet" href="css/stilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Galaxy</title>
+
+    <link rel="stylesheet" href="css/stilos.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
+
 <body>
- 
-  <!-- ===== ENCABEZADO ===== -->
-  <header>
-    <div class="header-pattern"></div>
-    <div class="badge">Desafío Web · Matemáticas Aplicadas</div>
-    <h1>Fibonacci y <span>Números Primos</span><br>en la Vida Real</h1>
-    <p class="header-sub">Matemáticas que resuelven problemas del mundo real mediante algoritmos interactivos</p>
-    <div class="student-info">
-      <span>Estudiante:</span> Lizbeth Cochi Mamani &nbsp;·&nbsp;
+
+    <!-- PARTICULAS -->
+    <div id="particles-js"></div>
+
+    <!-- PANTALLA INICIAL -->
+    <section id="inicio">
+
+        <div class="inicio-contenido">
+          <img class="entrada" src="img/mundo.jpg">
+          
+            <h1>GALAXIA DE LAS MATEMATICAS</h1>
+
+            <p>
+                Descubre cómo Fibonacci y los números primos
+                resuelven problemas del mundo real.
+            </p>
+
+            <button id="btnEntrar">
+                Entrar al Sistema
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENIDO -->
+    <main id="principal" class="oculto">
+
+        <!-- HEADER -->
+        <header>
+
+            <h1>🚀 Centro Matemático Interactivo</h1>
+
+            <p>
+                Explora problemas reales usando matemáticas
+            </p>
+
+        </header>
+        <!-- INTRODUCCION GENERAL -->
+
+<section class="intro-math">
+
+    <!-- TEXTO -->
+
+    <div class="intro-texto">
+
+        <span class="intro-badge">
+            🚀 PROYECTO INTERACTIVO
+        </span>
+
+        <h1>
+            Matemáticas aplicadas al mundo real
+        </h1>
+
+        <p>
+            Este sistema interactivo demuestra cómo los algoritmos
+            matemáticos pueden utilizarse para resolver problemas
+            reales relacionados con crecimiento poblacional,
+            ahorro progresivo, seguridad informática y análisis
+            de patrones numéricos.
+        </p>
+
+        <p>
+            A través de simulaciones visuales y formularios dinámicos,
+            el usuario podrá comprender cómo funcionan la serie
+            Fibonacci y los números primos dentro de diferentes
+            contextos de la vida cotidiana.
+        </p>
+
+        <!-- CARDS -->
+
+        <div class="intro-cards">
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-rabbit"></i>
+
+                <h3>Fibonacci</h3>
+
+                <p>
+                    Modela crecimiento natural y patrones matemáticos.
+                </p>
+
+            </div>
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Números primos</h3>
+
+                <p>
+                    Fundamentales para la seguridad informática moderna.
+                </p>
+
+            </div>
+
+            <div class="mini-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Simulaciones</h3>
+
+                <p>
+                    Resultados visuales dinámicos e interactivos.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-  </header>
- 
-  <!-- ===== NAVEGACIÓN ===== -->
-  <nav>
-    <a href="#contexto">Contexto</a>
-    <a href="#algoritmo">Algoritmo</a>
-    <a href="#calculadora">Calculadora</a>
-    <a href="#conclusion">Conclusión</a>
-    <a href="#enlaces">Enlaces</a>
-  </nav>
- 
-  <!-- ===== SECCIÓN 1: CONTEXTO ===== -->
-  <section id="contexto">
-    <p class="section-label">01 · Contexto del Problema</p>
-    <h2>¿Por qué aplicar estas matemáticas?</h2>
-    <p class="intro-text">
-      Los patrones matemáticos están en todas partes. La serie de Fibonacci describe el crecimiento
-      natural — desde espirales en caracoles hasta pétalos de flores. Los números primos son la base
-      de la seguridad informática moderna. Esta herramienta los combina para revelar cuáles términos
-      de Fibonacci también son primos: un conjunto rarísimo y fascinante de números.
+
+    <!-- IMAGEN -->
+
+    <div class="intro-imagen">
+      
+        <img class="flotar" src="img/mate.jpg">
+
+    </div>
+
+</section>
+        <!-- BOTONES -->
+        <section class="menu">
+
+            <button class="menu-btn" onclick="mostrarModulo('modulo1')">
+                🐇 Fibonacci Población
+            </button>
+
+            <button class="menu-btn" onclick="mostrarModulo('modulo2')">
+                💰 Fibonacci Ahorro
+            </button>
+
+            <button class="menu-btn" onclick="mostrarModulo('modulo3')">
+                🔐 Primos Seguridad
+            </button>
+
+            <button class="menu-btn" onclick="mostrarModulo('modulo4')">
+                ✨ Fibonacci + Primos
+            </button>
+
+        </section>
+
+        <!-- MODULO 1 -->
+
+<section id="modulo1" class="modulo oculto">
+
+    <!-- TITULO -->
+
+    <div class="hero-fibo">
+
+        <img
+        class="conejo conejo-izq"
+        src="img/zanahoria.png">
+
+        <div class="hero-texto">
+
+            <span class="badge"></span>
+
+            <h1>
+                Fibonacci en Crecimiento Poblacional
+            </h1>
+
+            <p>
+                Simulación del crecimiento de una población de conejos
+                usando la serie Fibonacci
+            </p>
+
+            <div class="frase-fibo">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <span>
+                    La serie Fibonacci permite modelar el crecimiento natural
+                    de especies donde cada generación depende de las anteriores.
+                </span>
+
+            </div>
+
+        </div>
+
+        <img
+        class="conejo conejo-der"
+        src="img/conejito.jpg">
+
+    </div>
+
+  <!-- contexto -->
+
+   <div class="contenedor-dos-columnas">
+
+    <div class="contexto-fibo">
+        <h2>
+            <i class="fa-solid fa-question-circle"></i>
+            Contexto del problema
+        </h2>
+        <p>
+            El problema de los conejos en la serie de Fibonacci busca modelar cómo
+            crece una población de conejos en condiciones ideales.
+        </p>
+        <p>
+            Se parte de una sola pareja de conejos jóvenes que, después de un mes,
+            se convierten en una pareja adulta capaz de reproducirse.
+            Cada pareja adulta produce una nueva pareja cada mes.
+        </p>
+        <p>
+            El objetivo es determinar cuántas parejas habrá en cada mes siguiendo
+            un patrón de crecimiento basado en la suma de las dos generaciones anteriores.
+        </p>
+    </div>
+
+    <div class="explicacion-fibo">
+        <div class="header-seccion">
+            <span class="numero-etiqueta"></span>
+            <span class="separador">•</span>
+            <span class="subtitulo-seccion">EXPLICACIÓN DEL ALGORITMO</span>
+        </div>
+        
+        <h2>¿Cómo funciona el código?</h2>
+        
+        <ol class="lista-pasos">
+            <li>
+                <span class="paso-numero">1</span>
+                <p>Se inician variables <code class="var-azul">a = 1</code> y <code class="var-azul">b = 1</code></p>
+            </li>
+            <li>
+                <span class="paso-numero">2</span>
+                <p>En cada iteración se calcula <code class="var-azul">c = a + b</code></p>
+            </li>
+            <li>
+                <span class="paso-numero">3</span>
+                <p>Se actualiza <code class="var-azul">a = b</code> y <code class="var-azul">b = c</code></p>
+            </li>
+        </ol>
+
+        <div class="contenedor-codigo">
+            <pre><code><span class="keyword">let</span> a = <span class="number">1</span>, b = <span class="number">1</span>, c;
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt; n; i++) {
+    c = a + b;
+    a = b;
+    b = c; <span class="comment">// variables simples</span>
+}</code></pre>
+        </div>
+    </div>
+
+</div>
+
+    <!-- CONTENIDO -->
+
+    <div class="dashboard-fibo">
+
+        <!-- IZQUIERDA -->
+
+        <div class="panel-formulario">
+
+            <h2>
+                <i class="fa-solid fa-clipboard-list"></i>
+                Formulario de Entrada
+            </h2>
+
+            <p>
+                Ingresa los datos para la simulación del crecimiento
+                de la población de conejos.
+            </p>
+
+            <div class="grupo-input">
+
+                <label>
+                    <i class="fa-solid fa-calendar"></i>
+                    Cantidad de meses
+                </label>
+
+                <input
+                type="number"
+                id="meses"
+                placeholder="Ejemplo: 10">
+
+                <small>
+                    Máximo recomendado: 50 meses
+                </small>
+
+            </div>
+
+            <div class="grupo-input">
+
+                <label>
+                    <i class="fa-solid fa-rabbit-running"></i>
+                    Ingrese su Nombre
+                </label>
+
+                <input type="text" id="inicial" placeholder="Ejemplo: Juan" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+">
+
+            </div>
+
+            <div class="suposiciones">
+
+                <h3>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Suposiciones del modelo
+                </h3>
+
+                <ul>
+
+                    <li>✔ Cada pareja tarda 1 mes en madurar</li>
+
+                    <li>✔ Cada pareja produce otra pareja</li>
+
+                    <li>✔ La población nunca disminuye</li>
+
+                    <li>✔ El ambiente tiene recursos ilimitados</li>
+
+                </ul>
+
+            </div>
+
+            <button onclick="poblacion()" class="btn-fibo">
+
+                <i class="fa-solid fa-play"></i>
+
+                Simular crecimiento
+
+            </button>
+
+        </div>
+
+        <!-- DERECHA -->
+
+        <div class="panel-resultado">
+
+            <div class="resultado-top">
+
+                <div>
+
+                    <h2>
+                        <i class="fa-solid fa-chart-column"></i>
+                        Resultado de la Simulación
+                    </h2>
+
+                    <p>
+                        Así crece la población mes a mes
+                    </p>
+
+                </div>
+
+                <div class="total-final">
+
+                    <span>Total final</span>
+
+                    <h1 id="totalConejos">
+                        0
+                    </h1>
+
+                </div>
+
+            </div>
+
+            <!-- RESULTADOS -->
+
+            <div id="listaConejos">
+
+                <div class="mensaje-vacio">
+
+                    Aquí aparecerá la simulación matemática.
+
+                </div>
+
+            </div>
+
+            <!-- CONCLUSION -->
+
+            <div class="conclusion-fibo">
+
+                <div class="texto-conclusion">
+
+                    <h2>
+                        <i class="fa-solid fa-trophy"></i>
+                        Conclusión
+                    </h2>
+
+                    <p>
+                        La serie Fibonacci es una herramienta poderosa
+                        para modelar el crecimiento natural de poblaciones.
+                    </p>
+
+                    <p>
+                        Este tipo de patrones aparece en:
+                    </p>
+
+                    <ul>
+
+                        <li>🌱 Naturaleza</li>
+                        <li>📈 Economía</li>
+                        <li>🧬 Biología</li>
+                        <li>💻 Simulación computacional</li>
+
+                    </ul>
+
+                </div>
+
+                <img
+                src="https://cdn-icons-png.flaticon.com/512/802/802009.png"
+                class="conejo-final">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+
+</section>
+<!--modulo 2 -->
+     <section id="modulo2" class="modulo oculto">
+      
+    <<!-- HERO MODULO 2 -->
+
+<div class="hero-ahorro-premium">
+
+    <!-- IMAGEN IZQUIERDA -->
+
+    <img
+    class="money-img money-left"
+    src="img/tesoro.jpg">
+
+    <!-- CENTRO -->
+
+    <div class="hero-centro-ahorro">
+
+        <span class="badge-ahorro">
+            MÓDULO 2 • CRECIMIENTO FINANCIERO
+        </span>
+
+        <h1>
+            Fibonacci en Crecimiento Financiero
+        </h1>
+
+        <p>
+            Simulación inteligente de ahorro progresivo utilizando
+            la serie Fibonacci aplicada a estrategias financieras modernas.
+        </p>
+
+        <!-- FRASE -->
+
+        <div class="frase-ahorro">
+
+            <i class="fa-solid fa-coins"></i>
+
+            <span>
+                Pequeños depósitos constantes pueden transformarse
+                en grandes acumulaciones financieras con el tiempo.
+            </span>
+
+        </div>
+
+        <!-- MINI STATS -->
+
+        <div class="stats-ahorro">
+
+            <div class="stat-box-ahorro">
+
+                <h2>📈</h2>
+
+                <span>Crecimiento</span>
+
+            </div>
+
+            <div class="stat-box-ahorro">
+
+                <h2>💰</h2>
+
+                <span>Ahorro Inteligente</span>
+
+            </div>
+
+            <div class="stat-box-ahorro">
+
+                <h2>🚀</h2>
+
+                <span>Proyección</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- IMAGEN DERECHA -->
+
+    <img
+    class="money-img money-right"
+    src="img/chanchito.jpg">
+
+</div>
+
+    <div class="barra-consejo-ahorro">
+        <span class="icono-ampolleta-ahorro">💡</span>
+        <p>La progresión de Fibonacci aplicada al ahorro permite visualizar cómo pequeños incrementos constantes generan una acumulación masiva de capital en el tiempo.</p>
+    </div>
+
+    <div class="fila-informativa-ahorro">
+        
+        <div class="tarjeta-info-ahorro border-rosa-ahorro">
+            <h3><i class="fa-solid fa-circle-question"></i> Contexto del problema</h3>
+            <p>El desafío del ahorro basado en la serie de Fibonacci busca modelar una estrategia de disciplina financiera donde el hábito de guardar dinero crece orgánicamente.</p>
+            <p>Se parte de una base de depósito preestablecida. Cada mes el compromiso aumenta, obligando al ahorrador a aportar una cantidad equivalente a la suma de los dos meses anteriores. Esto genera un crecimiento acelerado del fondo.</p>
+            <p>El objetivo es determinar la viabilidad de la estrategia a mediano plazo, proyectando el impacto total acumulado y evaluando el esfuerzo financiero requerido en las fases avanzadas de la serie.</p>
+        </div>
+
+        <div class="tarjeta-info-ahorro border-rosa-ahorro">
+            <span class="sub-etiqueta-ahorro">EXPLICACIÓN DEL ALGORITMO</span>
+            <h3>¿Cómo funciona el código?</h3>
+            
+            <div class="pasos-codigo-ahorro">
+                <div class="paso-item-ahorro">
+                    <span class="numero-paso-ahorro">1</span>
+                    <p>Se inicializan los depósitos de los meses iniciales: <code>a = base</code> y <code>b = base</code></p>
+                </div>
+                <div class="paso-item-ahorro">
+                    <span class="numero-paso-ahorro">2</span>
+                    <p>En cada iteración mensual se calcula el nuevo aporte: <code>deposito = a + b</code></p>
+                </div>
+                <div class="paso-item-ahorro">
+                    <span class="numero-paso-ahorro">3</span>
+                    <p>Se actualizan los registros históricos para el siguiente ciclo: <code>a = b</code> y <code>b = deposito</code></p>
+                </div>
+            </div>
+
+            <div class="caja-codigo-ahorro">
+                <pre><code><span class="txt-pink">let</span> a = base, b = base, deposito;
+<span class="txt-pink">for</span> (<span class="txt-pink">let</span> i = <span class="txt-pink">3</span>; i <= meses; i++) {
+    deposito = a + b;
+    a = b;
+    b = deposito;
+    totalAcumulado += deposito;
+}</code></pre>
+            </div>
+        </div>
+    </div> <div class="contenedor-simulacion-ahorro-interactivo">
+        
+        <div class="columna-izquierda-ahorro">
+            <div class="tarjeta-custom-modulo2">
+                <h2 class="titulo-tarjeta-ahorro">
+                    <i class="fa-solid fa-piggy-bank"></i> 
+                    Planificador de Ahorro
+                </h2>
+                <p class="subtexto-tarjeta-ahorro">
+                    Configura los parámetros para proyectar tu crecimiento financiero basado en la secuencia.
+                </p>
+
+                <div class="campo-entrada-ahorro">
+                    <label for="mesesAhorro">Cantidad de meses a simular:</label>
+                    <input type="number" id="mesesAhorro" class="input-custom-ahorro" placeholder="Ejemplo: 10" min="1" max="36">
+                </div>
+
+                <div class="campo-entrada-ahorro">
+                    <label for="baseAhorro">Depósito inicial base ($):</label>
+                    <input type="number" id="baseAhorro" class="input-custom-ahorro" placeholder="Ejemplo: 10" min="1">
+                </div>
+
+                <button class="btn-simular-ahorro" onclick="calcularAhorroFibonacci()">
+                    <i class="fa-solid fa-chart-line-up"></i> Proyectar Crecimiento
+                </button>
+                
+                <div class="suposiciones-ahorro">
+                    <h4><i class="fa-solid fa-circle-dollar-to-slot"></i> Reglas del Planificador:</h4>
+                    <ul>
+                        <li><strong>✓</strong> El mes 1 y mes 2 inician con el depósito base.</li>
+                        <li><strong>✓</strong> A partir del mes 3, el aporte es la suma de los dos meses previos.</li>
+                        <li><strong>✓</strong> El simulador calcula el interés compuesto implícito acumulado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="columna-derecha-ahorro">
+            <div class="tarjeta-custom-modulo2">
+                
+                <div class="encabezado-resultado-ahorro">
+                    <div>
+                        <h2 class="titulo-tarjeta-ahorro">
+                            <i class="fa-solid fa-wallet"></i> 
+                            Proyección del Fondo
+                        </h2>
+                        <p class="subtexto-tarjeta-ahorro">Historial de depósitos y crecimiento acumulado mes a mes</p>
+                    </div>
+                    <div class="marcador-total-ahorro">
+                        <span class="label-total-ahorro">Fondo Total</span>
+                        <span id="totalAcumuladoAhorro" class="numero-total-ahorro">0</span>
+                    </div>
+                </div>
+
+                <div id="resultadoAhorro" class="consola-ahorro-vacia">
+                    <div class="estado-espera-ahorro">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <p>Ingresa los datos para generar el estado de cuenta proyectado.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> 
+    <!-- CONCLUSION MODULO 2 -->
+
+<div class="conclusion-ahorro-premium">
+
+    <div class="texto-conclusion-ahorro">
+
+        <h2>
+            <i class="fa-solid fa-circle-check"></i>
+            Conclusión del Análisis Financiero
+        </h2>
+
+        <p>
+            La serie Fibonacci demuestra cómo una estrategia de ahorro
+            progresivo puede generar un crecimiento financiero acelerado
+            con el paso del tiempo.
+        </p>
+
+        <p>
+            Aunque los primeros depósitos parecen pequeños, el incremento
+            acumulativo permite observar cómo el capital aumenta de manera
+            significativa en los meses posteriores.
+        </p>
+
+        <p>
+            Este modelo matemático ayuda a comprender la importancia
+            de la disciplina financiera y la constancia en los planes
+            de ahorro a largo plazo.
+        </p>
+
+        <div class="beneficios-ahorro">
+
+            <div class="beneficio-item-ahorro">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <span>Fomenta el hábito del ahorro</span>
+            </div>
+
+            <div class="beneficio-item-ahorro">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Permite visualizar el crecimiento del capital</span>
+            </div>
+
+            <div class="beneficio-item-ahorro">
+                <i class="fa-solid fa-coins"></i>
+                <span>Ayuda a planificar metas financieras</span>
+            </div>
+
+            <div class="beneficio-item-ahorro">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Promueve estrategias de inversión progresiva</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- IMAGEN -->
+
+    <div class="imagen-conclusion-ahorro">
+
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png"
+        alt="Ahorro">
+
+    </div>
+
+</div>
+</section>
+<!-- modulo 3 --><!-- ===================================================== -->
+<!-- MODULO 3 - CRIPTOGRAFIA RSA -->
+<!-- ===================================================== -->
+<section id="modulo3" class="modulo oculto">
+
+    <div class="hero-rsa">
+        <img src="img/huella.jpg" class="img-rsa img-left">
+
+        <div class="hero-rsa-texto">
+            <span class="badge-rsa">
+                🔐 MÓDULO 3 • CRIPTOGRAFÍA RSA
+            </span>
+
+            <h1>
+                Seguridad Digital con Números Primos
+            </h1>
+
+            <p>
+                Simulación interactiva de criptografía RSA utilizando algoritmos matemáticos basados en números primos para validar seguridad digital.
+            </p>
+
+            <div class="terminal-rsa">
+                <div class="terminal-header-rsa">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-body-rsa">
+                    <p>> Iniciando protocolo RSA...</p>
+                    <p>> Escaneando integridad matemática...</p>
+                    <p>> Verificando número primo...</p>
+                    <p class="success-rsa">
+                        ✔ Sistema criptográfico listo
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <img src="img/cipto.jpg" class="img-rsa img-right">
+    </div>
+
+    <div class="dashboard-rsa">
+
+        <div class="fila-superior-rsa">
+            
+            <div class="card-rsa">
+                <span class="mini-tag-rsa">
+                    CONTEXTO DEL PROBLEMA
+                </span>
+                <h2>
+                    ¿Por qué existe RSA?
+                </h2>
+                <p>
+                    La criptografía RSA nace por la necesidad de proteger información privada en internet.
+                </p>
+                <p>
+                    Bancos, redes sociales, sistemas militares y plataformas digitales utilizan algoritmos basados en números primos para cifrar información.
+                </p>
+                <p>
+                    La dificultad matemática de factorizar números primos gigantes permite garantizar la seguridad de los datos.
+                </p>
+
+                <div class="stats-rsa">
+                    <div class="stat-rsa">
+                        <h3>🔐</h3>
+                        <span>Cifrado</span>
+                    </div>
+                    <div class="stat-rsa">
+                        <h3>🛡️</h3>
+                        <span>Seguridad</span>
+                    </div>
+                    <div class="stat-rsa">
+                        <h3>⚡</h3>
+                        <span>RSA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-rsa">
+                <span class="mini-tag-rsa">
+                    ANÁLISIS MATEMÁTICO
+                </span>
+                <h2>
+                    ¿Cómo funciona?
+                </h2>
+                <div class="pasos-rsa">
+                    <div class="paso-rsa">
+                        <div class="numero-rsa">1</div>
+                        <p>Se evalúa si el número es menor o igual a 1.</p>
+                    </div>
+                    <div class="paso-rsa">
+                        <div class="numero-rsa">2</div>
+                        <p>Se buscan divisores desde 2 hasta $\sqrt{n}$.</p>
+                    </div>
+                    <div class="paso-rsa">
+                        <div class="numero-rsa">3</div>
+                        <p>Si no existen divisores intermedios, el número es primo.</p>
+                    </div>
+                </div>
+
+                <div class="codigo-rsa">
+                    <div class="barra-rsa">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <p>rsaValidator.js</p>
+                    </div>
+<pre>
+<span class="azul">function</span> <span class="verde">esPrimo</span>(n){
+  <span class="azul">for</span>(let i=2; i&lt;=Math.sqrt(n); i++){
+      <span class="azul">if</span>(n%i==0){
+          <span class="rojo">return false</span>;
+      }
+  }
+  <span class="verde">return</span> n &gt; 1;
+}
+</pre>
+                </div>
+            </div>
+
+        </div> <div class="fila-inferior-rsa">
+
+            <div class="card-rsa">
+                <span class="mini-tag-rsa">
+                    VALIDACIÓN RSA
+                </span>
+                <h2>
+                    Formulario de Entrada
+                </h2>
+                <p>
+                    Ingresa una clave numérica para analizar su integridad criptográfica.
+                </p>
+
+                <div class="grupo-rsa">
+                    <label>Clave numérica</label>
+                    <input type="number" id="numeroRSA" placeholder="Ejemplo: 17">
+                </div>
+
+                <div class="reglas-rsa">
+                    <h3>🧠 Reglas del Analizador</h3>
+                    <ul>
+                        <li>✔ Debe ser entero positivo</li>
+                        <li>✔ Se analiza primalidad</li>
+                        <li>✔ Optimización matemática $\sqrt{n}$</li>
+                    </ul>
+                </div>
+
+                <button class="btn-rsa" onclick="analizarRSA()">
+                    🔐 Verificar seguridad
+                </button>
+            </div>
+
+            <div class="card-rsa">
+
+    <span class="mini-tag-rsa">
+        RESULTADO DEL ANÁLISIS
+    </span>
+
+    <h2>
+        Consola de Diagnóstico RSA
+    </h2>
+
+    <div class="Metricas-estado-rsa">
+        <div class="metrica-item-rsa" id="statusPrimalidad">
+            <span class="dot-status gray"></span>
+            <p>Primalidad: <strong class="txt-gray">Pendiente</strong></p>
+        </div>
+        <div class="metrica-item-rsa" id="statusComplejidad">
+            <span class="dot-status gray"></span>
+            <p>Complejidad ($\sqrt{n}$): <strong class="txt-gray">Sin evaluar</strong></p>
+        </div>
+        <div class="metrica-item-rsa" id="statusSeguridad">
+            <span class="dot-status gray"></span>
+            <p>Nivel de Seguridad: <strong class="txt-gray">Bloqueado</strong></p>
+        </div>
+    </div>
+
+    <div id="resultadoRSA" class="resultado-rsa">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>
+            Esperando validación criptográfica
+        </h3>
+
+        <p>
+            Introduce una clave en el formulario de la izquierda para desplegar el reporte estructural del sistema.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+</section> 
+
+
+        <!-- MODULO 4 -->
+        <section id="modulo4" class="modulo oculto">
+        <div id="seccion-fibonacci-primos" class="tab-content-cyber">
+    <div class="modulo-hibrido-wrapper">
+
+        <div class="header-hibrido-main">
+            <div class="decoracion-img img-izq">
+                <img src="img/codigo.jpg" alt="Math">
+            </div>
+            <h1>Sucesión Híbrida de Fibonacci y Primos</h1>
+            <p>Filtrado cuántico y análisis de primalidad sobre la secuencia de crecimiento áureo</p>
+            <div class="decoracion-img img-der">
+                <img src="img/numeros.jpg" alt="Matrix">
+            </div>
+        </div>
+
+        <div class="sinopsis-hibrida">
+            <i class="fa-solid fa-lightbulb"></i>
+            <p>La intersección de Fibonacci y los números primos revela patrones ocultos de alta eficiencia energética y espirales lógicas utilizadas en criptografía avanzada.</p>
+        </div>
+
+        <div class="fila-superior-hibrida">
+            
+            <div class="card-hibrida-bloque">
+                <div class="badge-titulo-hibrido color-cian">
+                    <i class="fa-solid fa-circle-question"></i> Contexto del problema
+                </div>
+                <div class="contenido-tarjeta-txt">
+                    <p>El desafío consiste en identificar aquellos eslabones de la cadena de Fibonacci que conservan la propiedad de la invisibilidad aritmética (ser primos).</p>
+                    <p>Mientras que Fibonacci modela la expansión natural y el crecimiento orgánico, los números primos actúan como los átomos numéricos indivisibles de las matemáticas.</p>
+                    <p>El objetivo es rastrear y aislar computacionalmente estos extraños puntos de convergencia pura donde la naturaleza geométrica choca directamente con la seguridad informática moderna.</p>
+                </div>
+            </div>
+
+            <div class="card-hibrida-bloque">
+                <div class="badge-titulo-hibrido color-cian">
+                    <i class="fa-solid fa-code"></i> Explicación del algoritmo
+                </div>
+                <h3 class="subtitulo-hibrido-panel">¿Cómo funciona el código?</h3>
+                
+                <ol class="lista-pasos-hibrida">
+                    <li><span>1</span> Se genera el elemento tradicional sumando los dos valores previos ($F_n = F_{n-1} + F_{n-2}$).</li>
+                    <li><span>2</span> Se extrae el valor y se inyecta a un bucle de descarte por raíz cuadrada ($\sqrt{n}$).</li>
+                    <li><span>3</span> Si el número es divisible únicamente por 1 y por sí mismo, es primo.</li>
+                </ol>
+
+                <div class="editor-codigo-hibrido">
+                    <div class="controles-editor">
+                        <span class="punto-e rojo"></span>
+                        <span class="punto-e amarilla"></span>
+                        <span class="punto-e verde"></span>
+                        <span class="nombre-archivo-e">hibridoAnalyzer.js</span>
+                    </div>
+                    <pre><code><span class="k-word">function</span> <span class="f-name">analizarHibrido</span>(n) {
+    <span class="k-word">for</span>(<span class="k-word">let</span> i = 2; i <= Math.sqrt(n); i++) {
+        <span class="k-word">if</span>(n % i === 0) <span class="k-word">return</span> <span class="n-val">false</span>;
+    }
+    <span class="k-word">return</span> n > <span class="n-val">1</span>;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila-inferior-hibrida">
+            
+            <div class="panel-formulario-hibrido">
+                <div class="badge-titulo-hibrido color-cian">
+                    <i class="fa-solid fa-square-poll-horizontal"></i> Formulario de Entrada
+                </div>
+                <p class="desc-form-h">Ingresa las coordenadas límites para la generación de la secuencia mixta.</p>
+                
+                <div class="campo-input-hibrido">
+                    <label><i class="fa-solid fa-calculator"></i> Cantidad de números</label>
+                    <input type="number" id="inputCantidadHibrido" placeholder="Ejemplo: 12" min="1" max="45">
+                    <span class="sugerencia-input">Máximo recomendado: 45 elementos</span>
+                </div>
+
+                <button onclick="ejecutarAnalisisHibrido()" class="btn-cyber-comb">
+                    <i class="fa-solid fa-shield-halved"></i> Verificar Secuencia
+                </button>
+
+                <div class="caja-suposiciones-hibrida">
+                    <h4><i class="fa-solid fa-circle-info"></i> Condiciones de control</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> El primer elemento se inicializa en la base estable ($F_0=0$).</li>
+                        <li><i class="fa-solid fa-check"></i> Se aplica descarte radical continuo para evitar latencia.</li>
+                        <li><i class="fa-solid fa-check"></i> El entorno web procesa la pila en microsegundos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel-resultados-hibrido">
+                <div class="badge-titulo-hibrido color-verde">
+                    <i class="fa-solid fa-square-terminal"></i> Resultado de la Simulación
+                </div>
+                <p class="desc-form-h">Evolución de la secuencia filtrada elemento por elemento:</p>
+
+                <div id="consolaSalidaHibrida" class="consola-salida-hibrida">
+                    <div class="aviso-vacio-hibrido">
+                        Aquí aparecerá la simulación matemática híbrida.
+                    </div>
+                </div>
+
+                <div class="card-conclusion-hibrida">
+                    <div class="titulo-concl-h">
+                        <i class="fa-solid fa-graduation-cap"></i> Conclusión
+                    </div>
+                    <div class="cuerpo-concl-h">
+                        <p>La combinación de ambas teorías demuestra que las estructuras de crecimiento naturales no son completamente caóticas; contienen puntos de seguridad rígidos que permiten modelar infraestructuras digitales de alta fidelidad y criptografía simétrica natural.</p>
+                        <div class="tags-concl-h">
+                            <span class="tag-c">Patrones naturales</span>
+                            <span class="tag-c">Seguridad fractal</span>
+                            <span class="tag-c">Iteración</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        </section>
+
+        <!-- CONCLUSION -->
+       <div class="tarjeta-final conclusion-seccion">
+    <h2>
+        <i class="fa-solid fa-square-check"></i>
+        Conclusión
+    </h2>
+    
+    <p>
+        Las matemáticas ayudan a resolver problemas reales en crecimiento, ahorro y seguridad informática. La <span class="resaltado-cian">serie de Fibonacci</span> no es solo una curiosidad matemática — es un modelo del crecimiento real. Aparece en la disposición de semillas de girasoles, el número de pétalos de flores, la reproducción de colonias de abejas y hasta en análisis financiero. Programar su generación nos enseña a pensar en términos de <em>patrones iterativos</em>.
     </p>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon fib">Fn</div>
-        <h3>Serie de Fibonacci</h3>
-        <p>Cada número es la suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13… Describe patrones
-        de crecimiento en la naturaleza, arquitectura y finanzas.</p>
-        <span class="tag fib">Crecimiento natural</span>
-      </div>
-      <div class="card">
-        <div class="card-icon prime">P</div>
-        <h3>Números Primos</h3>
-        <p>Solo divisibles entre 1 y sí mismos. Son los bloques constructores de todos los números
-        enteros y la base del cifrado RSA moderno.</p>
-        <span class="tag prime">Criptografía · Seguridad</span>
-      </div>
-      <div class="card">
-        <div class="card-icon combo">∩</div>
-        <h3>Primos de Fibonacci</h3>
-        <p>Los términos Fibonacci que también son primos son escasos y especiales. Detectarlos es
-        un problema activo en la matemática computacional.</p>
-        <span class="tag combo">Combinación única</span>
-      </div>
+
+    <p>
+        Los <span class="resaltado-oro">números primos</span> son la base de la criptografía moderna. Cada vez que realizas una compra en línea, tu información es protegida usando el algoritmo RSA, que depende de que factorizar productos de números primos grandes es computacionalmente difícil. Verificar primos enseña el concepto de <em>divisibilidad y seguridad matemática</em>.
+    </p>
+
+    <p>
+        Combinar ambos conceptos revela una pregunta abierta en matemáticas: <span class="resaltado-oro font-bold">¿existen infinitos primos de Fibonacci?</span> Actualmente se conocen muy pocos. Esta herramienta permite explorar esa frontera del conocimiento matemático de forma interactiva y visual.
+    </p>
+</div>
+
+<div class="tarjeta-final enlaces-seccion">
+    <h2>
+        <i class="fa-solid fa-link"></i>
+
+        <!-- ENLACES -->
+        <div class="footer-enlaces-cyber">
+    <div class="contenedor-redes-links">
+        
+        <a href="https://github.com/tu-usuario" target="_blank" class="tarjeta-link-red github-style">
+            <div class="glow-link-bg"></div>
+            <i class="fa-brands fa-github icon-link-r"></i>
+            <div class="txt-link-r">
+                <span class="label-red">REPOSITORIO</span>
+                <span class="nombre-red">GitHub</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square flecha-link-r"></i>
+        </a>
+
+        <a href="#" target="_blank" class="tarjeta-link-red doc-style">
+            <div class="glow-link-bg"></div>
+            <i class="fa-solid fa-folder-open icon-link-r"></i>
+            <div class="txt-link-r">
+                <span class="label-red">PROYECTO</span>
+                <span class="nombre-red">Pagina Publicada</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square flecha-link-r"></i>
+        </a>
+
     </div>
-  </section>
- 
-  <hr class="divider">
- 
-  <!-- ===== SECCIÓN 2: ALGORITMO ===== -->
-  <section id="algoritmo">
-    <p class="section-label">02 · Explicación del Algoritmo</p>
-    <h2>¿Cómo funciona el código?</h2>
- 
-    <!-- Algoritmo Fibonacci -->
-    <div class="algo-box">
-      <div class="algo-header">
-        <div class="algo-dot fib-dot"></div>
-        <strong>Algoritmo A: Generación de Fibonacci</strong>
-      </div>
-      <div class="algo-content">
-        <div class="algo-steps">
-          <div class="algo-step">
-            <div class="step-n">1</div>
-            <div>Se inician dos variables <code>a = 0</code> y <code>b = 1</code> (primeros dos términos)</div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">2</div>
-            <div>En cada iteración del ciclo, se calcula <code>c = a + b</code> (siguiente término)</div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">3</div>
-            <div>Se actualiza: <code>a = b</code> y luego <code>b = c</code> para avanzar la secuencia</div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">4</div>
-            <div>Se repite hasta generar la cantidad de términos solicitada por el usuario</div>
-          </div>
-        </div>
-        <div class="code-block">
-<span class="kw">let</span> a = <span class="num">1</span>, b = <span class="num">1</span>, c;
-<span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">2</span>; i &lt; n; i++) {
-  c = a + b;
-  a = b;
-  b = c; <span class="cm">// sin arrays, solo variables simples</span>
-}
-        </div>
-      </div>
+    
+    <div class="copyright-cyber">
+        <p>&copy; 2026 Core Cryptographic System. Todos los derechos reservados.</p>
     </div>
- 
-    <!-- Algoritmo Primo -->
-    <div class="algo-box">
-      <div class="algo-header">
-        <div class="algo-dot prime-dot"></div>
-        <strong>Algoritmo B: Verificación de Número Primo</strong>
-      </div>
-      <div class="algo-content">
-        <div class="algo-steps">
-          <div class="algo-step">
-            <div class="step-n">1</div>
-            <div>Se recibe un número entero y se cuenta cuántos divisores tiene</div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">2</div>
-            <div>Se itera desde 1 hasta el número verificando <code>numero % i == 0</code></div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">3</div>
-            <div>Si el contador de divisores es exactamente 2 (solo 1 y sí mismo) → es primo</div>
-          </div>
-          <div class="algo-step">
-            <div class="step-n">4</div>
-            <div>Números menores a 2 nunca son primos por definición matemática</div>
-          </div>
-        </div>
-        <div class="code-block">
-<span class="kw">let</span> numero = <span class="fn">parseInt</span>(document.<span class="fn">getElementById</span>(<span class="str">"numero"</span>).value);
-<span class="kw">let</span> contador = <span class="num">0</span>;
-<span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">1</span>; i &lt;= numero; i++) {
-  <span class="kw">if</span> (numero % i == <span class="num">0</span>) contador++;
-}
-<span class="kw">if</span> (contador == <span class="num">2</span>) {
-  document.<span class="fn">getElementById</span>(<span class="str">"resultado"</span>).innerHTML = <span class="str">"El número es primo"</span>;
-} <span class="kw">else</span> {
-  document.<span class="fn">getElementById</span>(<span class="str">"resultado"</span>).innerHTML = <span class="str">"El número no es primo"</span>;
-}
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <hr class="divider">
- 
-  <!-- ===== SECCIÓN 3: FORMULARIO + RESULTADO ===== -->
-  <section id="calculadora">
-    <p class="section-label">03 · Calculadora Interactiva</p>
-    <h2>Ingresa los datos y calcula</h2>
- 
-    <div class="form-container">
-      <form onsubmit="return false;">
-        <div class="form-row">
- 
-          <!-- Selector de modo -->
-          <div class="form-group">
-            <label for="modo">Modo de cálculo</label>
-            <select id="modo" onchange="cambiarModo()">
-              <option value="combinado">Fibonacci + Primos (combinado)</option>
-              <option value="fibonacci">Solo secuencia Fibonacci</option>
-              <option value="primo">Verificar número primo</option>
-              <option value="ahorro">Ahorro progresivo Fibonacci</option>
-            </select>
-          </div>
- 
-          <!-- Cantidad de términos -->
-          <div class="form-group" id="grupo-terminos">
-            <label for="terminos">Cantidad de términos</label>
-            <input type="number" id="terminos" min="2" max="40" value="15" placeholder="Ej: 15">
-          </div>
- 
-          <!-- Número a verificar (solo modo primo) -->
-          <div class="form-group" id="grupo-numero" style="display:none;">
-            <label for="numero">Número a verificar</label>
-            <input type="number" id="numero" min="1" value="97" placeholder="Ej: 97">
-          </div>
- 
-          <!-- Monto base (solo modo ahorro) -->
-          <div class="form-group" id="grupo-monto" style="display:none;">
-            <label for="monto">Depósito base (Bs.)</label>
-            <input type="number" id="monto" min="1" value="1" placeholder="Ej: 1">
-          </div>
- 
-        </div>
- 
-        <!-- Botón de ejecución -->
-        <button class="btn-calc" onclick="calcular()">▶ CALCULAR</button>
-        <button class="btn-clear" onclick="limpiar()">Limpiar resultado</button>
-      </form>
-    </div>
- 
-    <!-- Área de resultados -->
-    <div id="resultado-container">
-      <div class="result-placeholder" id="placeholder">
-        <div class="big-icon">Σ</div>
-        <p>Ingresa los datos y presiona <strong>CALCULAR</strong><br>para ver los resultados aquí</p>
-      </div>
-      <div id="resultado" style="display:none;"></div>
-    </div>
-  </section>
- 
-  <hr class="divider">
- 
-  <!-- ===== SECCIÓN 4: CONCLUSIÓN ===== -->
-  <section id="conclusion">
-    <p class="section-label">04 · Conclusión</p>
-    <h2>¿Cómo ayuda la matemática?</h2>
-    <div class="conclusion-box">
-      <p>La <span class="highlight-teal">serie de Fibonacci</span> no es solo una curiosidad matemática —
-      es un modelo del crecimiento real. Aparece en la disposición de semillas de girasoles, el número
-      de pétalos de flores, la reproducción de colonias de abejas y hasta en análisis financiero.
-      Programar su generación nos enseña a pensar en términos de <em>patrones iterativos</em>.</p>
- 
-      <p>Los <span class="highlight-gold">números primos</span> son la base de la criptografía moderna.
-      Cada vez que realizas una compra en línea, tu información es protegida usando el algoritmo RSA,
-      que depende de que factorizar productos de números primos grandes es computacionalmente difícil.
-      Verificar primos enseña el concepto de <em>divisibilidad y seguridad matemática</em>.</p>
- 
-      <p>Combinar ambos conceptos revela una pregunta abierta en matemáticas:
-      <span class="highlight-gold">¿existen infinitos primos de Fibonacci?</span> Actualmente se conocen
-      muy pocos. Esta herramienta permite explorar esa frontera del conocimiento matemático de forma
-      interactiva y visual.</p>
-    </div>
-  </section>
- 
-  <hr class="divider">
- 
-  <!-- ===== SECCIÓN 5: ENLACES ===== -->
-  <section id="enlaces">
-    <p class="section-label">05 · Entregables</p>
-    <h2>Repositorio y página publicada</h2>
-    <div class="links-row">
-      <a class="link-card" href="https://github.com/liz1020bth/DESAFIO-SIMULACION-MATEMATICA----FIBO-Y-PRIMOS.git" target="_blank">
-        <div class="link-icon">⚙</div>
-        <div>
-          <p>Repositorio Git</p>
-          <span>github.com/tu-usuario/...</span>
-        </div>
-      </a>
-      <a class="link-card" href="https://liz1020bth.github.io/DESAFIO-SIMULACION-MATEMATICA----FIBO-Y-PRIMOS/" target="_blank">
-        <div class="link-icon">🌐</div>
-        <div>
-          <p>Página Publicada</p>
-          <span>GitHub Pages / Vercel</span>
-        </div>
-      </a>
-    </div>
-  </section>
- 
-  <!-- ===== PIE DE PÁGINA ===== -->
-  <footer>
-    Proyecto desarrollado con <span>HTML · CSS · JavaScript</span> · Desafío Fibonacci y Primos · 2025
-  </footer>
- 
-  <script src="js/scrip.js"></script>
+</div>
+
+    </main>
+
+    <script src="js/scrip.js"></script>
+
 </body>
 </html>
- 
