@@ -63,4 +63,4 @@ El código fuente está organizado de la siguiente manera:
     ├── numeros.jpg
     └── tesoro.jpg
 
-fin.
+Fin
